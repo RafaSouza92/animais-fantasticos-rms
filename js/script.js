@@ -1,6 +1,6 @@
 import initScrollSmooth from './scrollSuave.js';
 import Accordion from './accordion.js';
-import sectionsAnimation from './sectionsAnimation.js';
+import ScrollAnima from './scrollAnimation.js';
 import TabNav from './tabNav.js';
 import Modal from './modal.js';
 import ToolTip from './tooltip.js';
@@ -17,17 +17,22 @@ const tabNav = new TabNav(
   '[data-tab="content"] section',
 );
 tabNav.init();
+
 const modal = new Modal(
   '[data-modal="abrir"]',
   '[data-modal="fechar"]',
   '[data-modal="container"]',
 );
 modal.init();
+
 const tooltip = new ToolTip('[data-tooltip]');
 tooltip.init();
 
+const scrollAnima = new ScrollAnima('[data-anime="scroll"]');
+scrollAnima.init();
+
 initScrollSmooth();
-sectionsAnimation();
+
 initDropDownMenu();
 initMenuMobile();
 initFuncionamneto();
