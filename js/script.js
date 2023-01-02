@@ -25,6 +25,7 @@ const modal = new Modal(
 modal.init();
 const tooltip = new ToolTip('[data-tooltip]');
 tooltip.init();
+
 initScrollSmooth();
 sectionsAnimation();
 initDropDownMenu();
