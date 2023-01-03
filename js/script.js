@@ -9,6 +9,7 @@ import MenuMobile from './menuMobile.js';
 import Funcionamneto from './funcionamento.js';
 import fetchAnimais from './fetchanimais.js';
 import fetchBitcoin from './fetchbitcoin.js';
+import SlideNav from './slide.js';
 
 const accordion = new Accordion('[data-anime="accordion"] dt');
 accordion.init();
@@ -43,3 +44,7 @@ const funcionamento = new Funcionamneto('[data-semana]', 'aberto');
 funcionamento.init();
 fetchAnimais('./animaisapi.json', '.numeros-grid');
 fetchBitcoin('https://blockchain.info/ticker', '.btc-preco');
+
+const slide = new SlideNav('.slide', '.slide-wrapper');
+slide.init();
+slide.addControl('.custom-controls');
